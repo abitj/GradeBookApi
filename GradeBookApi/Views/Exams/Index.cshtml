@@ -1,0 +1,54 @@
+﻿@model IEnumerable<GradeBookApi.Models.Exam>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.student.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.subject.Course)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Marks)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.ClassDay)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.student.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.subject.Course)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Marks)
+    </td>
+
+    <th>
+        @Html.DisplayFor(modelItem => item.ClassDay)
+    </th>
+
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+    </td>
+</tr>
+}
+
+</table>

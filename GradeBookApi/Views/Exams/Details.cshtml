@@ -1,0 +1,50 @@
+﻿@model GradeBookApi.Models.Exam
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Exam</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.student.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.student.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subject.Course)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subject.Course)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClassDay)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

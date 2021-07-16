@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "UploadFromCSV";
+}
+
+<h2>UploadFromCSV</h2>
+
+@using (Html.BeginForm("UploadFromCSV", "Exams", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<input type='file' id="file" name="file" />
+                <input type="submit" />}
